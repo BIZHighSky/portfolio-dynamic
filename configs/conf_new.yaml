@@ -1,0 +1,39 @@
+base-coins:
+  - usdt
+  - bitcoin
+  - ethereum
+
+db-tables:
+  public:
+    - prices
+
+  prices: DEV_ODS_CG_MARKET.DEV_ALL_TOKEN_METRICS
+  portfolio:
+    schema: DEV_PORTFOLIO_DYNAMIC_5_2023_03_26
+  
+    input: INPUT
+    total: TOTAL
+    unrealized: UNREALIZED_HISTORY
+    realized_history: REALIZED_HISTORY
+    snaphots: SNAPHOTS
+    portfolio_coins: PORTFOLIO_COINS
+    metrics-tables:
+        roi: ROI
+    
+output:
+  first_date: 'AAAA'
+  dict_metric_output:
+    roi_usdt: 'roi_usd'
+    roi_bitcoin: 'roi_btc'
+    roi_ethereum: 'roi_eth'
+    beta_bitcoin: beta_btc
+    corr_bitcoin: corr_btc
+    beta_ethereum: beta_eth
+    corr_ethereum: corr_eth
+    
+google-sheet:
+  sheet-id: 1XNyFe7oCHSOLlaLEL0reyM1F3_J4G312ngPNzuxwYis
+  path-to-key-file: '{conf_path}/gs_key.json'
+
+                
+ 

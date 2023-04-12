@@ -1,0 +1,43 @@
+portfolio:
+  - date: '2023-03-25'
+    coins:
+      - 3xcalibur
+      - camelot-token
+      - floki
+      - gains-network
+      - gmx
+      - hamachi-finance
+      - hop-protocol
+      - immutable-x
+      - joe
+      - magic
+      - multichain
+      - nakamoto-games
+      - oath
+      - okb
+      - optimism
+      - phoenix-global
+      - plutusdao
+      - radiant-capital
+      - ssv-network
+      - velodrome-finance
+      - vesta-finance
+      
+
+
+clickhouse:
+  client:
+    host: 10.0.12.101
+    #settings:
+    #    max_partitions_per_insert_block : 130
+  db:
+    fin-data:
+      schema: DEV_ODS_CG_MARKET
+      table: DEV_ALL_TOKEN_METRICS
+    ndau:
+      schema: DEV_DM_ANALYTCS
+      table: NDAU_CROSS_BC
+      
+google-sheet:
+  sheet-id: 1wHCThxTRgdJu2K0TnyFyQs8wUTTQfDumyelyb0QzYCE
+  path-to-key-file: configs/gs_key.json

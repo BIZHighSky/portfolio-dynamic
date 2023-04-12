@@ -1,0 +1,5 @@
+cg-api-key: -
+
+clickhouse:
+  user: -
+  pass: -
