@@ -8,20 +8,25 @@ db-tables:
     - prices
 
   prices: DEV_ODS_CG_MARKET.DEV_ALL_TOKEN_METRICS
+  btc_summary: DM_EMA_PRICES.EMA200_BTC_SUMMARY
+  
   portfolio:
-    schema: DEV_PORTFOLIO_DYNAMIC_5_2023_03_26
+    schema: PORTFOLIO_DYNAMIC_0
   
     input: INPUT
     total: TOTAL
     unrealized: UNREALIZED_HISTORY
     realized_history: REALIZED_HISTORY
-    snaphots: SNAPHOTS
+    snaphots: SNAPSHOTS
     portfolio_coins: PORTFOLIO_COINS
     metrics-tables:
-        roi: ROI
+        beta_bitcoin: METRICS
+        corr_bitcoin: METRICS
+        beta_ethereum: METRICS
+        corr_ethereum: METRICS
     
 output:
-  first_date: 'AAAA'
+  first_date: '2023-03-26'
   dict_metric_output:
     roi_usdt: 'roi_usd'
     roi_bitcoin: 'roi_btc'
@@ -32,7 +37,7 @@ output:
     corr_ethereum: corr_eth
     
 google-sheet:
-  sheet-id: 1XNyFe7oCHSOLlaLEL0reyM1F3_J4G312ngPNzuxwYis
+  sheet-id: 1wHCThxTRgdJu2K0TnyFyQs8wUTTQfDumyelyb0QzYCE
   path-to-key-file: '{conf_path}/gs_key.json'
 
                 
